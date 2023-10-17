@@ -11,8 +11,7 @@ int main() {
         number /= 10;
     }
 
-    printf("%d
-", sum);
+    printf("%d", sum);
 
     return 0;
 }
