@@ -1,14 +1,21 @@
 #include <stdio.h>
 int main()
 {
-    int x;
-    scanf("%d",&x);
-    if(x%10 == x/100 ||x%10 == x/1000)
+    int n,r,rev=0,t;
+    scanf("%d",&n);
+    t=n;
+    while(n>0)
     {
-        printf("Palindrome");
+        r=n%10;
+        rev=rev *10 +r;
+        n=n/10;
+    }
+    if(rev==t)
+    {
+        printf("True");
     }
     else
     {
-        printf("Not Palindrome");
+        printf("False");
     }
 }
