@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int a, largest,digit;
+    int a, largest=0,digit;
     scanf("%d",&a);
     while(a>0)
     {
