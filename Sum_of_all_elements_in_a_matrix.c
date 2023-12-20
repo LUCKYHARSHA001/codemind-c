@@ -5,14 +5,14 @@ int main()
     scanf("%d %d",&r,&c);
     int mat[r][c];
     int i,j;
-    int max=0;
+    int sum=0;
     for(i=0;i<r;i++)
     {
         for(j=0;j<c;j++)
         {
             scanf("%d",&mat[i][j]);
-            max+=mat[i][j];
+            sum+=mat[i][j];   
         }
     }
-    printf("%d",max);
+    printf("%d",sum);
 }
