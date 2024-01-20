@@ -1,10 +1,11 @@
-#include <stdio.h>
+#include<iostream>
+using namespace std;
 int main()
 {
-    int i,a,b;
-    scanf("%d %d",&a,&b);
-    for(i=a;i<=b;i++)
+    int i,x,y;
+    cin>>x>>y;
+    for(i=x;i<=y;i++)
     {
-        printf("%d ",i);
+        cout<<i<<' ';
     }
 }
