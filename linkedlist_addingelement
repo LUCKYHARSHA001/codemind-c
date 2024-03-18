@@ -1,0 +1,60 @@
+// implemintation of a singly linked list
+#include<stdio.h>
+#include<stdlib.h>
+// self - referential structure
+struct node {
+	int data;
+	struct node *next;  // pointer to node
+};
+// alias name
+typedef struct node Node;
+// taking head as a global variable
+Node *head = NULL;
+void insert_at_head(int val){
+	// creating a newNode
+	Node *newNode = (Node *)malloc(sizeof(Node));
+	newNode->data = val;
+	newNode->next = NULL;
+	if(head == NULL){
+		head = newNode;
+	}
+	else{
+		newNode->next = head;
+		head = newNode;
+	}
+}
+void display(){
+	if(head == NULL){
+		printf("NO Nodes to display");
+	}else{
+		Node *temp = head;
+		while(temp != NULL){
+			printf("%d ",temp->data);
+			temp = temp->next;
+		}
+		printf("\n");
+	}
+}
+int main(){
+	int ch;
+	// infinite loop
+	while(1){
+		printf("Enter\n1.Insert at head\n2.Insert at tail\n3.Display\nAny other to exit\n");
+		scanf("%d",&ch);
+		if(ch == 1){
+			// implement insert at head
+			int val;
+			printf("Enter a value for the node to br inserted : ");
+			scanf("%d",&val);
+			insert_at_head(val); // function call
+		}else if(ch == 2){
+			// implement insert at tail
+		}else if(ch == 3){
+			// implement display
+			display();
+		}else{
+			printf("Thank you for thr testing.ADIEV!!\n");
+			break;
+		}
+	}
+}
